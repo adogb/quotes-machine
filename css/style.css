@@ -1,0 +1,53 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	background-color: #EEEEEE;
+}
+h1 {
+	font-family: 'Great Vibes', Helvetica, cursive;
+	text-align: center;
+	font-size: 72px;
+}
+
+.quote {
+	font-style: italic;
+	text-align: justify;
+	margin: 0 0 20px 0;
+	font-size:20px;
+}
+.author {
+	color: #669999;
+	text-align: right;
+}
+#container {
+	background-color: #E5E5FF;
+	margin: 0 auto;
+	width: 600px;
+	border-radius: 20px;
+	padding: 30px;
+}
+
+#generator {
+	width: 100px;
+	background-color: #E4E4E4;
+	border-radius: 5px;
+	border: 1px solid #C9C9C9;
+	text-align: center;
+	font-size: 15px;
+	padding: 5px;
+	display: inline;
+}
+#generator a {
+	text-decoration: none;
+	color: black;
+}
+
+#tweet {
+	position:relative;
+	top: 5px;
+	margin: 0 9px 0 0;
+}
+#buttons {
+	margin: 0 auto;
+	width: 600px;
+	text-align: center;
+}
