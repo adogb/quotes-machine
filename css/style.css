@@ -1,11 +1,24 @@
+* {
+	margin:0;
+	padding:0;
+}
+
 body {
 	font-family: 'Open Sans', sans-serif;
 	background-color: #EEEEEE;
 }
+
+a:link, a:focus, a:active, a:visited {
+	text-decoration:none;
+	color:#ddd;
+}
+
 h1 {
 	font-family: 'Great Vibes', Helvetica, cursive;
 	text-align: center;
 	font-size: 72px;
+	padding-top:40px;
+	margin-bottom:30px;
 }
 
 .quote {
@@ -21,9 +34,10 @@ h1 {
 #container {
 	background-color: #E5E5FF;
 	margin: 0 auto;
-	width: 600px;
+	width: 70%;
 	border-radius: 20px;
 	padding: 30px;
+	position:relative; /*to be able to position #buttons absolute to it*/
 }
 
 #buttons {
@@ -50,6 +64,10 @@ h1 {
 }
 
 footer {
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:100%;
 	background-color: black;
 	height: 45px;
 	padding:10px 50px 0px 50px;	
