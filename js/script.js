@@ -1,6 +1,5 @@
 $(document).ready(function() {
 	$('body').css("height", $(document).height());
-	$('body').css("width", $(document).width());
 	var quotes = [["We have two lives, and the second begins when we realize we only have one.","Confucius"],
 		["Don't cry because it's over, smile because it happened.","Dr. Seuss"],
 		["Be yourself; everyone else is already taken.","Oscar Wilde"],
