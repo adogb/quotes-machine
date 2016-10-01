@@ -1,5 +1,10 @@
 $(document).ready(function() {
-	$('body').css("height", $(document).height());
+	$('html').css('height',$(window).height());
+	$('.container').css("height",$('body').height()-$('footer').innerHeight()); //innerheight() is height including padding but not border
+	$( window ).resize(function() {
+		$('html').css('height',$(window).height());
+		$('.container').css("height",$('body').height()-$('footer').innerHeight());
+	});
 	var quotes = [["We have two lives, and the second begins when we realize we only have one.","Confucius"],
 		["Don't cry because it's over, smile because it happened.","Dr. Seuss"],
 		["Be yourself; everyone else is already taken.","Oscar Wilde"],
