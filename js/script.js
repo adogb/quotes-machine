@@ -1,10 +1,11 @@
 $(document).ready(function() {
-	$('html').css('height',$(window).height());
-	$('.container').css("height",$('body').height()-$('footer').innerHeight()); //innerheight() is height including padding but not border
+	
+	sizing();
+	
 	$( window ).resize(function() {
-		$('html').css('height',$(window).height());
-		$('.container').css("height",$('body').height()-$('footer').innerHeight());
+		sizing();
 	});
+
 	var quotes = [["We have two lives, and the second begins when we realize we only have one.","Confucius"],
 		["Don't cry because it's over, smile because it happened.","Dr. Seuss"],
 		["Be yourself; everyone else is already taken.","Oscar Wilde"],
@@ -22,19 +23,24 @@ $(document).ready(function() {
 		["I'm not afraid of death; I just don't want to be there when it happens.","Woody Allen"],
 		["I find television very educating. Every time somebody turns on the set, I go into the other room and read a book.","Groucho Marx"],
 		["Go to heaven for the climate and hell for the company.","Benjamin Franklin Wade"],
-		["I am free of all prejudice. I hate everyone equally.","W.C. Fields"]];
+		["I am free of all prejudice. I hate everyone equally.","W.C. Fields"]], arrayLength=quotes.length, newQuote;
 	
-	var displayQuote = function(){
-		var newQuote = quotes[Math.floor(Math.random()*quotes.length)];
-		$(".quote").text(newQuote[0]);
-		$(".author").html("&mdash; "+newQuote[1]);
-		var tweetURL = "https://twitter.com/intent/tweet?text="+encodeURIComponent("\""+newQuote[0]+"\" - "+newQuote[1])+"&url=http://bit.ly/2cOrRPH";
-		$(".twitter-share-button").attr('href', tweetURL);
-	};
-
 	displayQuote();
+		
 	$("#generator").click(function(){
 		displayQuote();
 	});
+		
+	function displayQuote(){
+		newQuote = quotes[Math.floor(Math.random()*arrayLength)]/*, tweetURL = "https://twitter.com/intent/tweet?text="+encodeURIComponent("\""+newQuote[0]+"\" - "+newQuote[1])+"&url=http://bit.ly/2cOrRPH"*/;
+		$(".quote").text(newQuote[0]);
+		$(".author").html("&mdash; "+newQuote[1]);
+		//$(".twitter-share-button").attr('href', tweetURL);
+	};
 	
+	function sizing (){
+		$('html').css('height',$(window).height());
+		$('.container').css("height",$('body').height()-$('footer').innerHeight()); //innerheight() is height including padding but not border
+	};
+
 });
