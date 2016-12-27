@@ -1,10 +1,4 @@
 $(document).ready(function() {
-	
-	sizing();
-	
-	$( window ).resize(function() {
-		sizing();
-	});
 
 	var quotes = [["We have two lives, and the second begins when we realize we only have one.","Confucius"],
 		["Don't cry because it's over, smile because it happened.","Dr. Seuss"],
@@ -32,15 +26,9 @@ $(document).ready(function() {
 	});
 		
 	function displayQuote(){
-		newQuote = quotes[Math.floor(Math.random()*arrayLength)]/*, tweetURL = "https://twitter.com/intent/tweet?text="+encodeURIComponent("\""+newQuote[0]+"\" - "+newQuote[1])+"&url=http://bit.ly/2cOrRPH"*/;
+		newQuote = quotes[Math.floor(Math.random()*arrayLength)], tweetURL = "https://twitter.com/intent/tweet?text="+encodeURIComponent("\""+newQuote[0]+"\" - "+newQuote[1])+"&url=http://bit.ly/2cOrRPH";
 		$(".quote").text(newQuote[0]);
 		$(".author").html("&mdash; "+newQuote[1]);
-		//$(".twitter-share-button").attr('href', tweetURL);
+		$(".twitter-share-button").attr('href', tweetURL);
 	};
-	
-	function sizing (){
-		$('html').css('height',$(window).height());
-		$('.container').css("height",$('body').height()-$('footer').innerHeight()); //innerheight() is height including padding but not border
-	};
-
 });
