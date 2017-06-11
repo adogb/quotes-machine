@@ -22,7 +22,6 @@ main {
 
 a:link, a:focus, a:active, a:visited {
 	text-decoration:none;
-	color:#ddd;
 }
 
 h1 {
@@ -48,6 +47,7 @@ h1 {
 	max-width:50em;
 	margin-right:1em;
 	margin-left:1em;
+	margin-bottom:1em;
 }
 
 @media (min-width:768px){
